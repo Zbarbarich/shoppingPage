@@ -1,1 +1,431 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <title>Sporting Good Discounter</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-logo">
+            <h1>Sporting Goods Discounter</h1>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#" class="active">Products</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search products...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="filter-group">
+            <label>Product Type:</label>
+            <select id="productType">
+                <option value="all">All Products</option>
+                <option value="bats">Bats</option>
+                <option value="gloves">Gloves</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label>Bat Size:</label>
+            <select id="batSize" disabled>
+                <option value="all">All Sizes</option>
+                <option value="27">27"</option>
+                <option value="28">28"</option>
+                <option value="29">29"</option>
+                <option value="30">30"</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Glove Type:</label>
+            <select id="gloveHand" disabled>
+                <option value="all">All Types</option>
+                <option value="right">Right Hand Throw</option>
+                <option value="left">Left Hand Throw</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid Container -->
+    <div class="product-grid">
+        <!-- Product Pane 1 -->
+        <div class="product-pane">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h3>Easton Hypefire 2025</h3>
+            <p class="price">$349.99</p>
+            <p class="details">Available in 27, 28, 29 inch sizes</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal1">View Details</button>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product1a.jpg" alt="Product 1 View A" class="active carousel-img">
+                        <img src="images/product1b.jpg" alt="Product 1 View B" class="carousel-img">
+                        <img src="images/product1c.jpg" alt="Product 1 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Easton Hypefire 2025</h2>
+                <p class="price">$349.99</p>
+                <p class="details">Available in 27, 28, 29 inch sizes</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Pane 2 -->
+        <div class="product-pane">
+            <img src="images/product2.jpg" alt="Product 2">
+            <h3>Rawlings Icon 2025</h3>
+            <p class="price">$349.99</p>
+            <p class="details">Available in 28, 29, 30 inch sizes</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal2">View Details</button>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product2a.jpg" alt="Product 2 View A" class="active carousel-img">
+                        <img src="images/product2b.jpg" alt="Product 2 View B" class="carousel-img">
+                        <img src="images/product2c.jpg" alt="Product 2 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Rawlings Icon 2025</h2>
+                <p class="price">$349.99</p>
+                <p class="details">Available in 28, 29, 30 inch sizes</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Repeat structure for remaining 8 products -->
+        <div class="product-pane">
+            <img src="images/product3.jpg" alt="Product 3">
+            <h3>Louisville Slugger Select Pwr 2025</h3>
+            <p class="price">$349.99</p>
+            <p class="details">Available in 27, 28, 29, 30 inch sizes</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal3">View Details</button>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product3a.jpg" alt="Product 3 View A" class="active carousel-img">
+                        <img src="images/product3b.jpg" alt="Product 3 View B" class="carousel-img">
+                        <img src="images/product3c.jpg" alt="Product 3 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Louisville Slugger Select Pwr 2025</h2>
+                <p class="price">$349.99</p>
+                <p class="details">Available in 27, 28, 29, 30 inch sizes</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product4.jpg" alt="Product 4">
+            <h3>Marucci Cat X2 2025</h3>
+            <p class="price">$249.99</p>
+            <p class="details">Available in 27, 28, 29 inch sizes</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal4">View Details</button>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product4a.jpg" alt="Product 4 View A" class="active carousel-img">
+                        <img src="images/product4b.jpg" alt="Product 4 View B" class="carousel-img">
+                        <img src="images/product4c.jpg" alt="Product 4 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Marucci Cat X2 2025</h2>
+                <p class="price">$249.99</p>
+                <p class="details">Available in 27, 28, 29 inch sizes</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product5.jpg" alt="Product 5">
+            <h3>Marucci Cat X2 Composite2025</h3>
+            <p class="price">$349.99</p>
+            <p class="details">Available in 27, 28, 29, 30 inch sizes</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal5">View Details</button>
+        </div>
+
+        <!-- Modal 5 -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product5a.jpg" alt="Product 5 View A" class="active carousel-img">
+                        <img src="images/product5b.jpg" alt="Product 5 View B" class="carousel-img">
+                        <img src="images/product5c.jpg" alt="Product 5 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Marucci Cat X2 Composite 2025</h2>
+                <p class="price">$349.99</p>
+                <p class="details">Available in 27, 28, 29, 30 inch sizes</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product6.jpg" alt="Product 6">
+            <h3>Wilson A2000 Elly De La Cruz 12 inch</h3>
+            <p class="price">$299.99</p>
+            <p class="details">Available in right hand throw</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal6">View Details</button>
+        </div>
+
+        <!-- Modal 6 -->
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product6a.jpg" alt="Product 6 View A" class="active carousel-img">
+                        <img src="images/product6b.jpg" alt="Product 6 View B" class="carousel-img">
+                        <img src="images/product6c.jpg" alt="Product 6 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Wilson A2000 Elly De La Cruz 12 inch</h2>
+                <p class="price">$299.99</p>
+                <p class="details">Available in right hand throw</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product7.jpg" alt="Product 7">
+            <h3>Wilson A2000 12 inch</h3>
+            <p class="price">$269.99</p>
+            <p class="details">Available in left hand or right hand throw</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal7">View Details</button>
+        </div>
+
+        <!-- Modal 7 -->
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product7a.jpg" alt="Product 7 View A" class="active carousel-img">
+                        <img src="images/product7b.jpg" alt="Product 7 View B" class="carousel-img">
+                        <img src="images/product7c.jpg" alt="Product 7 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Wilson A2000 12 inch</h2>
+                <p class="price">$269.99</p>
+                <p class="details">Available in left hand or right hand throw</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product8.jpg" alt="Product 8">
+            <h3>Rawlings Pro Preferred 934 11.5 Baseball Glove</h3>
+            <p class="price">$379.99</p>
+            <p class="details">Available in left hand or right hand throw</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal8">View Details</button>
+        </div>
+
+        <!-- Modal 8 -->
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product8a.jpg" alt="Product 8 View A" class="active carousel-img">
+                        <img src="images/product8b.jpg" alt="Product 8 View B" class="carousel-img">
+                        <img src="images/product8c.jpg" alt="Product 8 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Rawlings Pro Preferred 934 11.5 Baseball Glove</h2>
+                <p class="price">$379.99</p>
+                <p class="details">Available in left hand or right hand throw</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product9.jpg" alt="Product 9">
+            <h3>Wilson A2000 CM33SS Superskin 33" Catcher's Mitt</h3>
+            <p class="price">$299.99</p>
+            <p class="details">Available in right hand throw</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal9">View Details</button>
+        </div>
+
+        <!-- Modal 9 -->
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product9a.jpg" alt="Product 9 View A" class="active carousel-img">
+                        <img src="images/product9b.jpg" alt="Product 9 View B" class="carousel-img">
+                        <img src="images/product9c.jpg" alt="Product 9 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Wilson A2000 CM33SS Superskin 33 Catcher's Mitt"</h2>
+                <p class="price">$299.99</p>
+                <p class="details">Available in right hand throw</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-pane">
+            <img src="images/product10.jpg" alt="Product 10">
+            <h3>Rawlings Heart of the Hide DCT 13" 1st Base Mitt</h3>
+            <p class="price">$299.99</p>
+            <p class="details">Available in left hand throw</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="modal-open" data-modal="modal10">View Details</button>
+        </div>
+
+        <!-- Modal 10 -->
+        <div id="modal10" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Image Carousel -->
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/product10a.jpg" alt="Product 10 View A" class="active carousel-img">
+                        <img src="images/product10b.jpg" alt="Product 10 View B" class="carousel-img">
+                        <img src="images/product10c.jpg" alt="Product 10 View C" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&lt;</button>
+                    <button class="carousel-btn next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h2>Rawlings Heart of the Hide DCT 13" 1st Base Mitt</h2>
+                <p class="price">$299.99</p>
+                <p class="details">Available in left hand throw</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
